@@ -7,6 +7,7 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(express.static('dist'));
 /* mongoDB연결 */
 const url = 'mongodb+srv://skyg00700:X7OBmfyrxEoCBzP0@cluster0.ia7qlez.mongodb.net/?retryWrites=true&w=majority'
 const client = new MongoClient(url);
